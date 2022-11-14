@@ -16,7 +16,7 @@ public class Jump : MonoBehaviour
 
     public Transform groundCheckCollider;
     public LayerMask groundLayer;
-    const float groundCheckRadius = 0.2f;
+    public float groundCheckRadius;
 
     [SerializeField] float jumpPower = 500;
     bool coyoteJump;
