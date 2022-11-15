@@ -14,6 +14,7 @@ public class Jump : MonoBehaviour
 
     bool isGrounded;
 
+    public Transform groundCheck;
     public Transform groundCheckCollider;
     public LayerMask groundLayer;
     const float groundCheckRadius = 0.2f;
@@ -82,6 +83,11 @@ public class Jump : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         coyoteJump = false;
     }
+    private void CheckSurronding()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+    }
 
     void Jump1()
     {
@@ -112,6 +118,11 @@ public class Jump : MonoBehaviour
                 animator.SetBool("Jump", true);
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+
     }
 
 }

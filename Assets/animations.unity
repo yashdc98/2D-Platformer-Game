@@ -235,9 +235,9 @@ GameObject:
   - component: {fileID: 247812474}
   - component: {fileID: 247812473}
   - component: {fileID: 247812477}
-  - component: {fileID: 247812476}
   - component: {fileID: 247812479}
   - component: {fileID: 247812478}
+  - component: {fileID: 247812476}
   - component: {fileID: 247812480}
   m_Layer: 0
   m_Name: Player
@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8882fd6b45519f428f942eabde7f2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 20
-  groundCheckRadius: 0.25
+  MovementSpeed: 10
+  groundCheckRadius: 0.5
   groundCheck: {fileID: 1562983658}
   whatIsGround:
     serializedVersion: 2
@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalJumps: 1
+  groundCheck: {fileID: 1562983658}
   groundCheckCollider: {fileID: 1562983658}
   groundLayer:
     serializedVersion: 2
